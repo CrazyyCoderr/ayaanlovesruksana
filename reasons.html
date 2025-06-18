@@ -8,51 +8,75 @@
   <style>
     body {
       font-family: 'Quicksand', sans-serif;
-      background: #fff0f5;
+      background: linear-gradient(135deg, #fff0f5, #ffe6f0);
       margin: 0;
       padding: 0;
       text-align: center;
       color: #333;
+      overflow-x: hidden;
     }
     header {
       background: #ffc0cb;
       color: #fff;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
       font-family: 'Pacifico', cursive;
-      font-size: 2rem;
+      font-size: 2.5rem;
+      animation: fadeIn 2s ease;
     }
     nav {
       margin-top: 1rem;
     }
     nav a {
-      margin: 0 10px;
+      margin: 0 12px;
       color: #d63384;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #a61e5c;
     }
     .reasons-container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
       padding: 1rem;
+      animation: fadeIn 1.5s ease-in-out;
     }
     .reason-card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      width: 250px;
-      transition: transform 0.3s ease;
+      background: #fff0fa;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      width: 280px;
+      font-size: 1.1rem;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
     }
     .reason-card:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
+      background: #ffe6f5;
+    }
+    .reason-card::after {
+      content: '💖';
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      opacity: 0.5;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .footer {
       margin: 3rem 0 1rem;
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: #888;
     }
   </style>
@@ -73,15 +97,18 @@
   </nav>
 
   <div class="reasons-container">
-    <div class="reason-card">You have the kindest heart I’ve ever known 💗</div>
-    <div class="reason-card">You always know how to make me smile 😊</div>
-    <div class="reason-card">Your laugh is my favorite sound in the world 🎶</div>
-    <div class="reason-card">You make me feel loved even on bad days 🌦️</div>
-    <div class="reason-card">Your hugs are my safe place 🫂</div>
-    <div class="reason-card">I love how deeply you care for others 💞</div>
-    <div class="reason-card">You're so strong and beautiful inside out 💪🌺</div>
-    <div class="reason-card">You accept me completely, flaws and all 🌼</div>
-    <div class="reason-card">I love how you believe in us always 🌠</div>
+    <div class="reason-card">You have the kindest, most selfless heart — you care about people even when they don’t deserve it, and that’s rare 💗</div>
+    <div class="reason-card">Your smile lights up my world, like sunlight through clouds — you bring me peace and joy just by existing 😊</div>
+    <div class="reason-card">When you laugh, it's like a melody my heart was waiting to hear — pure happiness in a sound 🎶</div>
+    <div class="reason-card">You make my worst days feel like soft rain instead of storms — your love is my comfort 🌦️</div>
+    <div class="reason-card">Your hugs feel like home — safe, warm, and where I want to be forever 🫂</div>
+    <div class="reason-card">You pour so much love into the world — your empathy and kindness make everything softer 💞</div>
+    <div class="reason-card">You are stunning, but your strength and soul shine even brighter — you inspire me daily 💪🌺</div>
+    <div class="reason-card">With you, I don’t need to hide any part of me — you accept and love me completely 🌼</div>
+    <div class="reason-card">Even when things are hard, you fight for us with hope and love — I admire your belief in us 🌠</div>
+    <div class="reason-card">You always check in on me even when you’re hurting — that kind of love is rare and powerful 🌷</div>
+    <div class="reason-card">You make ordinary moments feel magical — walks, calls, or silence, it’s all perfect with you 🌙</div>
+    <div class="reason-card">You love without limits, fear, or condition — you give me a love I once thought only existed in dreams 💫</div>
   </div>
 
   <div class="footer">
