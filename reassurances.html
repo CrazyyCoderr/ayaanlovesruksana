@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Reassurances</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #fff0f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: #ffc0cb;
+      color: #fff;
+      padding: 1rem 0;
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+    }
+    nav {
+      margin: 1rem 0;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #d63384;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 1rem;
+    }
+    .reassurance-box {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: background 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+    .reassurance-box:hover {
+      background: #ffe4ec;
+      transform: translateY(-3px);
+    }
+    .reassurance-text {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      text-align: left;
+      animation: fadeIn 0.4s ease-in-out forwards;
+    }
+    .footer {
+      margin: 3rem 0 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; max-height: 0; }
+      to { opacity: 1; max-height: 500px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Daily Reassurances 💕
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="reasons.html">Why I Love You</a>
+    <a href="reassurances.html">Daily Reassurances</a>
+    <a href="gallery.html">Our Photos</a>
+    <a href="timeline.html">Our Timeline</a>
+    <a href="letters.html">Letters</a>
+    <a href="dreams.html">Future Dreams</a>
+    <a href="promises.html">Promises</a>
+  </nav>
+  <div class="container">
+    <div class="reassurance-box" onclick="toggleText(this)">
+      You are enough 💗
+      <div class="reassurance-text">Even on days when you feel low or unsure, I want you to know you are always more than enough for me. You never have to change for my love.</div>
+    </div>
+    <div class="reassurance-box" onclick="toggleText(this)">
+      I’m always with you 🌙
+      <div class="reassurance-text">No matter the distance, no matter the time of day — I’m always thinking of you, loving you, supporting you. You are never alone.</div>
+    </div>
+    <div class="reassurance-box" onclick="toggleText(this)">
+      Your body is beautiful 🌸
+      <div class="reassurance-text">From your eyes to your smile to every little detail — you are the definition of beauty to me. I adore everything about you just as you are.</div>
+    </div>
+    <div class="reassurance-box" onclick="toggleText(this)">
+      You can always talk to me ☁️
+      <div class="reassurance-text">No matter what’s going on in your mind or heart, I’m here to listen without judgement. You’re safe with me.</div>
+    </div>
+    <div class="reassurance-box" onclick="toggleText(this)">
+      We’re a team 💪
+      <div class="reassurance-text">We’ll go through everything together — the good, the bad, the silly, and the serious. I’m not going anywhere. Ever.</div>
+    </div>
+    <div class="reassurance-box" onclick="toggleText(this)">
+      I trust you completely 💞
+      <div class="reassurance-text">My love is rooted in complete trust. You are precious to me and I believe in everything we are building together.</div>
+    </div>
+    <div class="reassurance-box" onclick="toggleText(this)">
+      You make my world better 🌷
+      <div class="reassurance-text">You brighten even the darkest moments of my life. Your presence fills me with peace and hope every single day.</div>
+    </div>
+    <div class="reassurance-box" onclick="toggleText(this)">
+      You’re my safe space 🏡
+      <div class="reassurance-text">With you, I can be myself completely. You make me feel at home no matter where we are, and I want you to feel the same with me.</div>
+    </div>
+  </div>
+  <div class="footer">
+    Made for you, my peace, my love – Ayaan 💌
+  </div>
+
+  <script>
+    function toggleText(selectedBox) {
+      const allBoxes = document.querySelectorAll(".reassurance-box");
+      allBoxes.forEach(box => {
+        const text = box.querySelector(".reassurance-text");
+        if (box === selectedBox) {
+          text.style.display = text.style.display === "block" ? "none" : "block";
+        } else {
+          text.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Dreams</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #fef6ff, #ffe6fa);
+      margin: 0;
+      padding: 0;
+      color: #4d004d;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header {
+      background: #f8c4ec;
+      color: #fff;
+      padding: 1rem;
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    nav {
+      margin: 1rem 0;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #a3006b;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #660033;
+    }
+    .dream-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    .dream {
+      background: #fff0fa;
+      padding: 1rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.4s ease, background 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .dream:hover {
+      transform: translateY(-5px);
+      background: #ffe0f0;
+    }
+    .dream h3 {
+      color: #cc0066;
+      margin-bottom: 0.5rem;
+    }
+    .dream p {
+      max-height: 0;
+      overflow: hidden;
+      margin: 0;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+      opacity: 0;
+    }
+    .dream.active p {
+      max-height: 200px;
+      margin-top: 0.5rem;
+      opacity: 1;
+    }
+    .footer {
+      margin: 3rem 0 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    @media (max-width: 700px) {
+      .dream-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Our Future Dreams ✨
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="reasons.html">Why I Love You</a>
+    <a href="reassurances.html">Daily Reassurances</a>
+    <a href="gallery.html">Our Photos</a>
+    <a href="timeline.html">Our Timeline</a>
+    <a href="letters.html">Letters</a>
+    <a href="dreams.html">Future Dreams</a>
+    <a href="promises.html">Promises</a>
+  </nav>
+
+  <div class="dream-container">
+    <div class="dream" onclick="toggleDream(this)">
+      <h3>Our Dream Home 🏡</h3>
+      <p>Cozy, filled with warmth and laughter. A place where every wall has a photo of us and every room holds our memories.</p>
+    </div>
+    <div class="dream" onclick="toggleDream(this)">
+      <h3>Traveling the World 🌍</h3>
+      <p>Hand in hand, discovering new places, cultures, and cuisines — and making memories at every stop.</p>
+    </div>
+    <div class="dream" onclick="toggleDream(this)">
+      <h3>Lazy Sundays Together ☕</h3>
+      <p>Cuddled under soft blankets, sharing stories, sipping chai, and never wanting the day to end.</p>
+    </div>
+    <div class="dream" onclick="toggleDream(this)">
+      <h3>Our Little Family 🐾</h3>
+      <p>A fluffy dog, maybe two. Waking up to tail wags and ending the day with snuggles and laughter.</p>
+    </div>
+    <div class="dream" onclick="toggleDream(this)">
+      <h3>Growing Old With You 👵👴</h3>
+      <p>Silver hair, warm hugs, soft smiles. Still teasing you, still loving you, still holding your hand like it’s the first time.</p>
+    </div>
+    <div class="dream" onclick="toggleDream(this)">
+      <h3>Building Something Together 🛠️</h3>
+      <p>Whether it’s a little café, a garden, or a dream project — I want to build it with you, for us.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    Dreams we’ll live — together forever, Ayaan 💫
+  </div>
+
+  <script>
+    function toggleDream(clickedDream) {
+      document.querySelectorAll('.dream').forEach(d => {
+        if (d !== clickedDream) d.classList.remove('active');
+      });
+      clickedDream.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

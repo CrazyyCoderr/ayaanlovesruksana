@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Timeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe6e6);
+      margin: 0;
+      padding: 0;
+      color: #4d004d;
+      text-align: center;
+    }
+    header {
+      background: #ffb6c1;
+      color: white;
+      padding: 1rem;
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    nav {
+      margin: 1rem 0;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #a3006b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background: #ff99cc;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    .timeline-item {
+      background: #fff;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      width: 45%;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 2rem 0;
+      animation: fadeInUp 0.7s ease;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .timeline-item.left {
+      left: 0;
+    }
+    .timeline-item.right {
+      left: 55%;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 15px;
+      height: 15px;
+      background: #ff66a3;
+      border: 3px solid white;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-item.left::before {
+      right: -8px;
+    }
+    .timeline-item.right::before {
+      left: -8px;
+    }
+    .timeline-date {
+      font-weight: bold;
+      color: #cc0066;
+      margin-bottom: 0.5rem;
+    }
+    .footer {
+      margin: 3rem 0 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    @media (max-width: 768px) {
+      .timeline::after {
+        left: 8px;
+        margin-left: 0;
+      }
+      .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 2.5rem;
+      }
+      .timeline-item::before {
+        left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Our Journey Together 🕰️
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="reasons.html">Why I Love You</a>
+    <a href="reassurances.html">Daily Reassurances</a>
+    <a href="gallery.html">Our Photos</a>
+    <a href="timeline.html">Our Timeline</a>
+    <a href="letters.html">Letters</a>
+    <a href="dreams.html">Future Dreams</a>
+    <a href="promises.html">Promises</a>
+  </nav>
+
+  <div class="timeline">
+    <div class="timeline-item left">
+      <div class="timeline-date">March 14, 2024</div>
+      <div>We met for the first time. My heart knew something special had just begun. 💖</div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-date">April 2, 2024</div>
+      <div>Our first late night call — laughter, stories, and butterflies. 🦋</div>
+    </div>
+    <div class="timeline-item left">
+      <div class="timeline-date">May 7, 2024</div>
+      <div>When you called me yours — and I couldn’t stop smiling. 💘</div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-date">July 18, 2024</div>
+      <div>Our first little fight... but we came out stronger. 💪</div>
+    </div>
+    <div class="timeline-item left">
+      <div class="timeline-date">September 1, 2024</div>
+      <div>Shared dreams, long talks, and endless love. We were building something beautiful. 🌸</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    More memories to come — with love, Ayaan 💞
+  </div>
+</body>
+</html>

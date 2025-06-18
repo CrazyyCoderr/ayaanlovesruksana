@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Promises to You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #fffde7);
+      color: #3e3e3e;
+      text-align: center;
+      padding-bottom: 3rem;
+     cursor: url('https://cur.cursors-4u.net/cursors/cur-2/cur129.cur'), auto;
+    }
+    header {
+      background-color: #00bcd4;
+      color: white;
+      padding: 2rem;
+      font-family: 'Courgette', cursive;
+      font-size: 2.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    nav {
+      margin: 1rem 0;
+    }
+    nav a {
+      margin: 0 12px;
+      color: #006064;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .promise-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem auto;
+      max-width: 1000px;
+    }
+    .promise {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      width: 250px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .promise:hover {
+      transform: scale(1.05);
+    }
+    .promise h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.3rem;
+      color: #00acc1;
+    }
+    .promise-content {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #555;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .promise.open .promise-content {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    My Sweet Promises 💌
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="reasons.html">Why I Love You</a>
+    <a href="reassurances.html">Daily Reassurances</a>
+    <a href="gallery.html">Our Photos</a>
+    <a href="timeline.html">Our Timeline</a>
+    <a href="letters.html">Letters</a>
+    <a href="dreams.html">Future Dreams</a>
+    <a href="promises.html">Promises</a>
+  </nav>
+
+  <div class="promise-container">
+    <div class="promise">
+      <h3>I promise to always listen</h3>
+      <div class="promise-content">
+        Whether it’s about your day or your dreams, I’ll always be there to listen without judgment.
+      </div>
+    </div>
+    <div class="promise">
+      <h3>I promise to support you</h3>
+      <div class="promise-content">
+        Through every challenge and every high, I’ll be your constant cheerleader and comfort.
+      </div>
+    </div>
+    <div class="promise">
+      <h3>I promise to grow with you</h3>
+      <div class="promise-content">
+        No matter where life takes us, we’ll grow together and become better for each other.
+      </div>
+    </div>
+    <div class="promise">
+      <h3>I promise to make you smile</h3>
+      <div class="promise-content">
+        From silly jokes to warm hugs, I’ll try my best to bring joy into your life every single day.
+      </div>
+    </div>
+    <div class="promise">
+      <h3>I promise to love endlessly</h3>
+      <div class="promise-content">
+        Not just today or tomorrow — forever. I love you more than words can hold.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.promise').forEach(box => {
+      box.addEventListener('click', () => {
+        document.querySelectorAll('.promise').forEach(p => p.classList.remove('open'));
+        box.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>
